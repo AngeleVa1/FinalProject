@@ -54,7 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseClasses\BaseClass.cs" />
-    <Compile Include="MyGame\First.cs" />
+    <Compile Include="Pigu.Lt\First.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
