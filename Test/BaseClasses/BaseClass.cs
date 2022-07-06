@@ -3,9 +3,9 @@ using NUnit.Framework;
 using NUnit.Framework.Interfaces;
 using System.IO;
 
-namespace Tests.DemoQA
+namespace Test.BaseClasses
 {
-    public class BaseTest
+    public class BaseClass
     {
         [SetUp]
         public static void setup()

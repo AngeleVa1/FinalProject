@@ -6,10 +6,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Test.BaseClasses;
 
 namespace Test.Pigu.Lt
 {
-    public class First
+   
+    public class First : BaseClass
     {
         [SetUp]
         public static void setup()
@@ -34,5 +36,21 @@ namespace Test.Pigu.Lt
 
             FirstPage.closeButton();
         }
+        [Test]
+        public static void LogInPage()
+        {
+            FirstPageSecondTest.closeCookieByAccepting();
+            FirstPageSecondTest.navigateToLogInPage();
+            string email = "angele.jasinskaite@gmail.com";
+            string password = "Automation1/";
+            FirstPageSecondTest.fillTheForm(email, password);
+            FirstPageSecondTest.LogIn();
+
+            string expectedValue = "Angele";
+            string actualValue = FirstPageSecondTest.verifyConnection();
+
+            Assert.IsTrue(actualValue.Contains(expectedValue));
+        }
+
     }
 }
