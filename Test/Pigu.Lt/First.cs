@@ -11,7 +11,7 @@ using Test.BaseClasses;
 namespace Test.Pigu.Lt
 {
    
-    public class First : BaseClass
+    public class First 
     {
         [SetUp]
         public static void setup()

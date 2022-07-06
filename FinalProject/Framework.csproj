@@ -57,6 +57,7 @@
     <Compile Include="Pages\Common.cs" />
     <Compile Include="Pages\Pigu.Lt\FirstPage.cs" />
     <Compile Include="Pages\Pigu.Lt\FirstPageSecondTest.cs" />
+    <Compile Include="Pages\Pigu.Lt\FurniturePages.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

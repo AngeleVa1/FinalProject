@@ -20,23 +20,7 @@ namespace Framework.Pages
             selectElement.SelectByValue(value);
         }
 
-        internal static void performRightClick(string locator)
-        {
-            IWebElement element = getElement(locator);
-            Actions actions = new Actions(Driver.getDriver());
 
-            actions.DoubleClick(element);
-            actions.Perform();
-        }
-
-        internal static void performDoubleClick(string locator)
-        {
-            IWebElement element = getElement(locator);
-            Actions actions = new Actions(Driver.getDriver());
-
-            actions.ContextClick(element);
-            actions.Perform();
-        }
 
         public static void sendKeysToElement(string locator, string keys)
         {
