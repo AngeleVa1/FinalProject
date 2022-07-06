@@ -17,16 +17,15 @@ namespace Test.Pigu.Lt
         public static void setup()
         {
             Driver.setDriver();
-            Driver.open("https://pigu.lt/lt/");
+            Driver.open("https://pigu.lt/");
 
         }
         [Test]
         public static void AddToFavorite()
         {
+            FirstPage.closeCookieByAccepting();
             FirstPage.searchForSportsItem();
             FirstPage.swimmingPool();
-            FirstPage.closeCookieByAccepting();
-            FirstPage.chooseSwimingPool();
             FirstPage.addToCart();
 
             string expectedMessage = "Prekė įtraukta į krepšelį";

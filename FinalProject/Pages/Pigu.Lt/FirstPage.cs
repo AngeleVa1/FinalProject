@@ -9,9 +9,15 @@ namespace FinalProject.Pages.Pigu.Lt
 {
     public class FirstPage
     {
+        public static void closeCookieByAccepting()
+        {
+            string acceptCookieButton = "//*[@class='button agree']";
+            Common.clickElement(acceptCookieButton);
+        }
         public static void searchForSportsItem()
         {
             string sportsItemButton = "//*[@id ='department-431']";
+            Common.waitForElementToBeClicable(sportsItemButton);
             Common.clickElement(sportsItemButton);
         }
 
@@ -21,26 +27,20 @@ namespace FinalProject.Pages.Pigu.Lt
             Common.waitForElementToBeVisible(freeTimeButton);
             Common.clickElement(freeTimeButton);
             string swimmingPoolButton = "//*[@id='categoriesGrid']/div[1]/a/div/img"; 
+            Common.waitForElementToBeVisible(swimmingPoolButton);
             Common.clickElement(swimmingPoolButton);
-        }
-        public static void closeCookieByAccepting()
-        {
-            string acceptCookieButton = "//*[@class='button agree']";
-            Common.waitForElementToBeVisible(acceptCookieButton);
-            Common.clickElement(acceptCookieButton);
-        }
-
-        public static void chooseSwimingPool() { 
-            
             string swimmingPool = "//*[@id='categoriesGrid']/div[1]/a/p";
+            Common.waitForElementToBeVisible(swimmingPool);
             Common.clickElement(swimmingPool);
             string firstPool = "//*[@id='productBlock29456710']/div/div/div[3]/a/img[1]";
             Common.clickElement(firstPool);
         }
+       
 
         public static void addToCart()
         {
             string addToCartButton = "//*[@id='productPage']/section[1]/div[1]/div[2]/div[3]/div[6]/div[2]/button";
+            Common.waitForElementToBeVisible(addToCartButton);
             Common.clickElement(addToCartButton);
         }
 

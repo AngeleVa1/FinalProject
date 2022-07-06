@@ -12,6 +12,7 @@ namespace Framework
         public static void setDriver()
         {
             ChromeOptions options = new ChromeOptions();
+            //options.AddArgument("--headless");
             options.AddArgument("--start-maximized");
             driver = new ChromeDriver(options);
 

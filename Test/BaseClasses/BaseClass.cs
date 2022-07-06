@@ -12,7 +12,7 @@ namespace Test.BaseClasses
         {
             Driver.setDriver();
             Driver.open("https://pigu.lt");
-        }
+        } 
         
         [TearDown]
         public static void close()
