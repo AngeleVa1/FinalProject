@@ -13,15 +13,6 @@ namespace Framework.Pages
             return Driver.getDriver().FindElement(By.XPath(locator));
         }
 
-        public static void selectOptionByValue(string locator, string value)
-        {
-            IWebElement element = getElement(locator);
-            SelectElement selectElement = new SelectElement(element);
-            selectElement.SelectByValue(value);
-        }
-
-
-
         public static void sendKeysToElement(string locator, string keys)
         {
             getElement(locator).SendKeys(keys);
@@ -42,20 +33,10 @@ namespace Framework.Pages
             wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(locator)));
         }
 
-        
         public static void waitForElementToBeClicable(string locator)
         {
             WebDriverWait wait = new WebDriverWait(Driver.getDriver(), TimeSpan.FromSeconds(25));
             wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(locator)));
         }
-        public static void ScrollToElement(string locator)
-        {
-            IWebElement element = getElement(locator);
-            Actions actions = new Actions(Driver.getDriver());
-
-            actions.ScrollToElement(element);
-            actions.Click(element);
-            actions.Perform();
-        }
-        }
+    }
 }

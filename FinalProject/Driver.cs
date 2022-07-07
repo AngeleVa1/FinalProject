@@ -1,5 +1,7 @@
-﻿using OpenQA.Selenium;
+﻿using Microsoft.Extensions.Options;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
 using System;
 using System.IO;
 
@@ -11,12 +13,8 @@ namespace Framework
 
         public static void setDriver()
         {
-            ChromeOptions options = new ChromeOptions();
-            //options.AddArgument("--headless");
-            options.AddArgument("--start-maximized");
-            driver = new ChromeDriver(options);
-
-            driver.Manage().Timeouts().ImplicitWait = System.TimeSpan.FromSeconds(10);
+            driver = new FirefoxDriver();
+            driver.Manage().Window.Maximize();
         }
 
         public static IWebDriver getDriver()

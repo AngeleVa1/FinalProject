@@ -39,14 +39,14 @@ namespace FinalProject.Pages.Pigu.Lt
 
         public static void addToCart()
         {
-            string addToCartButton = "//*[@id='productPage']/section[1]/div[1]/div[2]/div[3]/div[6]/div[2]/button";
+            string addToCartButton = "//*[@class='btn btn-big-icon-inline btn-green']";
             Common.waitForElementToBeVisible(addToCartButton);
             Common.clickElement(addToCartButton);
         }
 
         public static string VerifyIfWasAdded()
         {
-            string actualMessage = "//*[@class='add-to-cart-modal-title']";
+            string actualMessage = "/html/body/div[15]/div/div/div/div[2]/div/div[2]/div/div[1]/div";
             return Common.getElementText(actualMessage);
         }
 

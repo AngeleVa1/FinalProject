@@ -11,7 +11,6 @@ namespace Test.BaseClasses
         public static void setup()
         {
             Driver.setDriver();
-            Driver.open("https://pigu.lt");
         } 
         
         [TearDown]

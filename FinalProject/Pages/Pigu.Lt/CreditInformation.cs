@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FinalProject.Pages.Pigu.Lt
 {
-    public class FurniturePages
+    public class CreditInformation
     {
         public static void closeCookieByAccepting()
         {
@@ -17,19 +17,20 @@ namespace FinalProject.Pages.Pigu.Lt
         }
         public static void informationButton()
         {
-            string informationButton = "//*[@id='fixedHeaderContainer']/div/div/div[2]/ul[2]/li/a";
+            string informationButton = "//*[@class='has-submenu guide-item']";
             Common.clickElement(informationButton);
         }
 
         public static void moreInformationAboutCredit()
         {
-            string moreAboutCredit = "//*[@id='iron_2']/div[1]/div/div/div[3]/a";
+            string moreAboutCredit = "/html/body/div[1]/div[8]/section/div/div/div[2]/div[2]/div/div[2]/div[1]/div/div/div[3]";
             Common.clickElement(moreAboutCredit);       
         }
 
         public static string checkAboutCredit()
         {
-            string actualResult = "//*[@id='textPageContent']/div/h1";
+            string actualResult = "(//*[@style='text-align:justify'])[4]";
+            Common.waitForElementToBeVisible(actualResult);
             return Common.getElementText(actualResult); 
         }
     }
