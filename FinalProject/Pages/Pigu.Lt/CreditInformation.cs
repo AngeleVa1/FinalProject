@@ -23,7 +23,7 @@ namespace FinalProject.Pages.Pigu.Lt
 
         public static void moreInformationAboutCredit()
         {
-            string moreAboutCredit = "/html/body/div[1]/div[8]/section/div/div/div[2]/div[2]/div/div[2]/div[1]/div/div/div[3]";
+            string moreAboutCredit = "//*[@href='https://pigu.lt/lt/t/mokek_issimoketinai']";
             Common.clickElement(moreAboutCredit);       
         }
 

@@ -21,18 +21,18 @@ namespace FinalProject.Pages.Pigu.Lt
         }
         public static void pressSearchButton()
         {
-            string searchButton = "/html/body/div[1]/div[1]/div/div[1]/div/div/div[3]/div[2]/form/div/button";
+            string searchButton = "//*[@widget-attachpoint='searchBarSubmitButton']";
             Common.clickElement(searchButton);
         }
         public static void sortByShop()
         {
-            string shopCheckButton = "/html/body/div[1]/div[8]/div[1]/section[2]/div/div/div[1]/div[2]/ul/li[2]/ul/li[1]/a/label/div";
+            string shopCheckButton = "(//*[@class='icheckbox icheck-item'])[2]";
             Common.clickElement(shopCheckButton);
         }
 
         public static void searchForLegoGreatVehicles()
         {
-            string legoGreatVehiclesItem = "(//*[@class='image-wrap'])[3]"; 
+            string legoGreatVehiclesItem = "//*[@rel-widget-id='productBlock39047688']"; 
             Common.clickElement(legoGreatVehiclesItem);
         }
 

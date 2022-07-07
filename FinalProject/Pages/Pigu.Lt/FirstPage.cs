@@ -46,13 +46,14 @@ namespace FinalProject.Pages.Pigu.Lt
 
         public static string VerifyIfWasAdded()
         {
-            string actualMessage = "/html/body/div[15]/div/div/div/div[2]/div/div[2]/div/div[1]/div";
+            string actualMessage = "(//*[@widget-id='cartWidget'])[2]";
             return Common.getElementText(actualMessage);
         }
 
         public static void closeButton()
         {
             string closeButton = "//*[@id='close']";
+            Common.waitForElementToBeVisible(closeButton);
             Common.clickElement(closeButton);
         }
     }

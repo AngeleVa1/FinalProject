@@ -13,7 +13,7 @@ namespace Test.Pigu.Lt
     public class SpecialPrice : BaseClass
     {
         [SetUp]
-    public static void setup()
+    public static void open()
     {
        
         Driver.open("https://pigu.lt/lt/super/akcijos");

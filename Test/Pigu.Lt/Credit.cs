@@ -13,7 +13,7 @@ namespace Test.Pigu.Lt
     public class Credit : BaseClass
     {
         [SetUp]
-        public static void setup()
+        public static void open()
         {
             Driver.open("https://pigu.lt/lt/baldai-baldai-internetu-ir-interjeras");
         }
