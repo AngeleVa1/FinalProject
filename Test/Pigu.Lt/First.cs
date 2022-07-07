@@ -16,7 +16,6 @@ namespace Test.Pigu.Lt
         [SetUp]
         public static void open()
         {
-            //Driver.setDriver();
             Driver.open("https://pigu.lt/");
 
         }
